@@ -1,0 +1,21 @@
+{
+  "name": "brb-telegram-bot",
+  "version": "0.0.1",
+  "description": "BRB telegram bot",
+  "main": "index.js",
+  "repository": "git@github.com:eluck/brb-telegram-bot.git",
+  "author": "Evgeny Lukianchikov",
+  "license": "MIT",
+  "dependencies": {
+    "gorchichka": "^0.3.6",
+    "micro-bot": "^1.3.4",
+    "now": "^8.2.2",
+    "telegraf": "^3.10.1"
+  },
+  "scripts": {
+    "deploy": "now -e NODE_ENV=production",
+    "dev": "source .env && micro-bot -t ${BOT_TOKEN_DEV}",
+    "start": "source .env && micro-bot -d ${NOW_URL} -t ${BOT_TOKEN_PROD}",
+    "test": "standard"
+  }
+}
