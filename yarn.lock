@@ -2,6 +2,12 @@
 # yarn lockfile v1
 
 
+argparse@^1.0.7:
+  version "1.0.9"
+  resolved "https://registry.yarnpkg.com/argparse/-/argparse-1.0.9.tgz#73d83bc263f86e97f8cc4f6bae1b0e90a7d22c86"
+  dependencies:
+    sprintf-js "~1.0.2"
+
 async-to-gen@^1.3.2:
   version "1.3.3"
   resolved "https://registry.yarnpkg.com/async-to-gen/-/async-to-gen-1.3.3.tgz#d52c9fb4801f0df44abc4d2de1870b48b60e20bb"
@@ -12,6 +18,10 @@ async-to-gen@^1.3.2:
 babylon@^6.14.0:
   version "6.18.0"
   resolved "https://registry.yarnpkg.com/babylon/-/babylon-6.18.0.tgz#af2f3b88fa6f5c1e4c634d1a0f8eac4f55b395e3"
+
+compile-template@^0.2.0:
+  version "0.2.0"
+  resolved "https://registry.yarnpkg.com/compile-template/-/compile-template-0.2.0.tgz#e334ddffa9fcf470ecc7ded9d6289bf3cfbe0916"
 
 debug@^3.0.0:
   version "3.0.1"
@@ -28,6 +38,10 @@ encoding@^0.1.11:
   resolved "https://registry.yarnpkg.com/encoding/-/encoding-0.1.12.tgz#538b66f3ee62cd1ab51ec323829d1f9480c74beb"
   dependencies:
     iconv-lite "~0.4.13"
+
+esprima@^4.0.0:
+  version "4.0.0"
+  resolved "https://registry.yarnpkg.com/esprima/-/esprima-4.0.0.tgz#4499eddcd1110e0b218bacf2fa7f7f59f55ca804"
 
 gorchichka@^0.3.6:
   version "0.3.6"
@@ -47,6 +61,13 @@ is-async-supported@^1.2.0:
 is-stream@^1.0.1:
   version "1.1.0"
   resolved "https://registry.yarnpkg.com/is-stream/-/is-stream-1.1.0.tgz#12d4a3dd4e68e0b79ceb8dbc84173ae80d91ca44"
+
+js-yaml@^3.6.1:
+  version "3.10.0"
+  resolved "https://registry.yarnpkg.com/js-yaml/-/js-yaml-3.10.0.tgz#2e78441646bd4682e963f22b6e92823c309c62dc"
+  dependencies:
+    argparse "^1.0.7"
+    esprima "^4.0.0"
 
 magic-string@^0.19.0:
   version "0.19.1"
@@ -86,6 +107,18 @@ now@^8.2.2:
 sandwich-stream@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/sandwich-stream/-/sandwich-stream-1.0.0.tgz#7830e45797b5933287f1f9b28f871907456262f2"
+
+sprintf-js@~1.0.2:
+  version "1.0.3"
+  resolved "https://registry.yarnpkg.com/sprintf-js/-/sprintf-js-1.0.3.tgz#04e6926f662895354f3dd015203633b857297e2c"
+
+telegraf-i18n@^6.0.2:
+  version "6.0.3"
+  resolved "https://registry.yarnpkg.com/telegraf-i18n/-/telegraf-i18n-6.0.3.tgz#c1f0caad41451bc21e697e8fab36505d738f36ea"
+  dependencies:
+    compile-template "^0.2.0"
+    debug "^3.0.0"
+    js-yaml "^3.6.1"
 
 telegraf@^3.10.1, telegraf@^3.7.0:
   version "3.10.1"
