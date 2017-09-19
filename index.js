@@ -1,21 +1,23 @@
+require('./imports/lib/patch-module-loader')(__dirname);
 const path = require('path');
 const { Composer, Markup } = require('micro-bot');
 const TelegrafI18n = require('telegraf-i18n');
-
-const sendWelcome = require('./common/send_welcome');
-const sendMenu = require('./common/send_menu');
-const coffeeMenu = require('./common/coffee_menu');
+const sendWelcome = require('/imports/menus/send_welcome');
+const sendMenu = require('/imports/menus/send_menu');
+const coffeeMenu = require('/imports/menus/coffee_menu');
 
 const bot = new Composer();
 const i18n = new TelegrafI18n({
   defaultLanguage: 'ru',
-  directory: path.resolve(__dirname, 'locales')
+  directory: path.resolve(__dirname, 'imports/locales')
 });
 
 
 bot.use(i18n);
 bot.command('/start', sendWelcome, sendMenu);
 bot.command('help', ctx => ctx.i18n.t('common.help'));
+
+console.log('node path:', __dirname);
 
 
 
@@ -38,7 +40,8 @@ bot.hears('Большой (130Р)', ctx => ctx.reply('Товар добавле�
     [ctx.i18n.t('common.menu.coffee'), ctx.i18n.t('common.menu.altcoffee')],
     [ctx.i18n.t('common.menu.tea'), ctx.i18n.t('common.menu.coctails')],
     [ctx.i18n.t('common.menu.breakfast'), ctx.i18n.t('common.menu.decerts')],
-    [ctx.i18n.t('common.menu.order')]])
+    [ctx.i18n.t('common.menu.order'), ctx.i18n.t('common.menu.restart')]
+  ])
   .resize()
   .extra())));
 

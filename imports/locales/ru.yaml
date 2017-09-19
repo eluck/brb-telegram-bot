@@ -5,13 +5,14 @@ common:
   menuMessage: Meню
 
   menu:
-    coffee: ☕️ Кофе на основе молока
+    coffee: ☕️ Кофе с молоком
     altcoffee: ☕️ Альтернатива
     tea: 🍵 Чай
     coctails: 🍸 Коктейли, смузи, фреши
     breakfast: 🍳 Завтраки
     decerts:  🍧Десерты
     order: 📋 Заказ
+    restart: /start
 
   help: |
     <b>Help</b> help</i> help.
